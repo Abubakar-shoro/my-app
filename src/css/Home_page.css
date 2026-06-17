@@ -48,6 +48,8 @@
     font-weight: 600;
     transition: all 0.2s ease-in-out;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .search-btn:hover {
@@ -59,6 +61,47 @@
 
 .search-btn:active {
     transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .search_form {
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 30px;
+        padding: 12px;
+    }
+
+    .Search_moive {
+        flex: 1 1 100%;
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+
+    .search-btn {
+        flex: 1;
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .search_form {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .Search_moive {
+        padding: 10px 12px;
+        font-size: 14px;
+        width: 100%;
+    }
+
+    .search-btn {
+        width: 100%;
+        padding: 12px 14px;
+        font-size: 13px;
+    }
 }
 
 .movie-grid {
